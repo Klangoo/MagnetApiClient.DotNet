@@ -1,0 +1,8 @@
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\bin\Debug\netcoreapp2.0\Klangoo.Client.deps.json
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\bin\Debug\netcoreapp2.0\Klangoo.Client.dll
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\bin\Debug\netcoreapp2.0\Klangoo.Client.pdb
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Debug\netcoreapp2.0\Klangoo.Client.csproj.CoreCompileInputs.cache
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Debug\netcoreapp2.0\Klangoo.Client.AssemblyInfoInputs.cache
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Debug\netcoreapp2.0\Klangoo.Client.AssemblyInfo.cs
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Debug\netcoreapp2.0\Klangoo.Client.dll
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Debug\netcoreapp2.0\Klangoo.Client.pdb

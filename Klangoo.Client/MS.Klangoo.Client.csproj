@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release_net45</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C7AB4BB-297E-4E2A-BBB8-CAC5FD7D96B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Klangoo.Client</RootNamespace>
+    <AssemblyName>Klangoo.Client</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_net45|AnyCPU' ">
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net45\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_net20|AnyCPU' ">
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net20\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="MagnetAPIClient.cs" />
+  </ItemGroup>
+
+  <Target Name="Build">
+    <Message Text="Configuration is $(Configuration)" />  
+    <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" /> 
+    <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).dll" TargetType="library"/>    
+  </Target>
+
+</Project>

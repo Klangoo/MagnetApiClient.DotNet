@@ -1,0 +1,13 @@
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.csproj.CoreCompileInputs.cache
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.AssemblyInfoInputs.cache
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.AssemblyInfo.cs
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Example.NLP.deps.json
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Example.NLP.runtimeconfig.json
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Example.NLP.runtimeconfig.dev.json
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Example.NLP.dll
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Example.NLP.pdb
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Client.dll
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\bin\Debug\netcoreapp2.0\Klangoo.Client.pdb
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.csproj.CopyComplete
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.dll
+c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Example.NLP\obj\Debug\netcoreapp2.0\Klangoo.Example.NLP.pdb
