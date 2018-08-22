@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Klangoo.Magnet.ApiClient</id>
+    <version>2.0.0</version>
+    <authors>Klangoo</authors>
+    <owners>Klangoo</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Klangoo/MagnetApiClient.DotNet</projectUrl>
+    <iconUrl>http://www.klangoo.com/images/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Magnet API client driver for .Net</description>
+    <releaseNotes>Support Net Framework 2.0 and above; netcore2.0; netstandard2.0</releaseNotes>
+    <copyright>Copyright 2018, Klangoo Inc.</copyright>
+    <tags>Magnet Klangoo MagnetApiClient API</tags>
+  </metadata>
+  <files>
+	<file src="bin\Release\net20\Klangoo.Client.dll" target="lib\net20\Klangoo.Client.dll" />
+    <file src="bin\Release\net40\Klangoo.Client.dll" target="lib\net40\Klangoo.Client.dll" />
+	<file src="bin\Release\net45\Klangoo.Client.dll" target="lib\net45\Klangoo.Client.dll" />
+	<file src="bin\Release\net46\Klangoo.Client.dll" target="lib\net46\Klangoo.Client.dll" />
+	<file src="bin\Release\netcoreapp2.0\Klangoo.Client.dll" target="lib\netcoreapp2.0\Klangoo.Client.dll" />
+	<file src="bin\Release\netstandard2.0\Klangoo.Client.dll" target="lib\netstandard2.0\Klangoo.Client.dll" />
+  </files>
+</package>
