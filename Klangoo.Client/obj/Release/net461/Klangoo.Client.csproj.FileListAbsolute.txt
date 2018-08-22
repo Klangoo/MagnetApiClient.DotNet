@@ -1,7 +1,0 @@
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\bin\Release\net461\Klangoo.Client.dll
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\bin\Release\net461\Klangoo.Client.pdb
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Release\net461\Klangoo.Client.csproj.CoreCompileInputs.cache
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Release\net461\Klangoo.Client.AssemblyInfoInputs.cache
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Release\net461\Klangoo.Client.AssemblyInfo.cs
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Release\net461\Klangoo.Client.dll
-c:\dev\GitHub\MagnetApiClient.DotNet\Klangoo.Client\obj\Release\net461\Klangoo.Client.pdb
