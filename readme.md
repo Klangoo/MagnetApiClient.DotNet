@@ -6,124 +6,64 @@
 * [Installation](#installation)
 * [Usage](#usage)
 
-
 <a name="about"></a>
 # About
 
-Magnet offers online publishers and digital content providers with the following features to help them better engage their users on their website and mobile App.
-- Topically Related Articles
-- Personalized Recommendations
-- Automatically Generated Summary
-- Follow a Specific Topic
-- Follow a Developing Story
-- Meta Tags/Description
-- Highlight Named-Entities
-- Entity Listing
-- Entity Pages
+Klangoo NLP API is a natural language processing (NLP) service that uses the rule-based paradigm and machine learning to recognize the aboutness of text. The service recognizes the category of the text, extracts key disambiguated topics, places, people, brands, events, and 41 other types of names; analyzes text using tokenization, parts of speech, parsing, word sense disambiguation, named entity recognition; and automatically finds the relatedness score between documents.
 
-[Read More](http://www.klangoo.com/Engagement.aspx).
+[Read More](https://klangoosupport.zendesk.com/hc/en-us/categories/360000812171-Klangoo-Natural-Language-API).
 
-[Book a demo with our sales team now!](mailto:sales@klangoo.com)
+[Signup for a free trail](https://connect.klangoo.com/pub/Signup/)
 
 <a name="installation"></a>
 # Installation
 
 ## Prerequisites
 
-- An API Key Provided by [Klangoo](http://klangoo.com)
-- An API Secret Provided by [Klangoo](http://klangoo.com)
+- This library is compatible with .Net Framework 4.x, .Net Core 2.x, .Net Core 3.x, .NET 5 and .NET 6
+- An API Key Provided by [Klangoo](https://klangoosupport.zendesk.com/hc/en-us/articles/360015236872-Step-2-Registering-to-Klangoo-NLP-API)
+- An API Secret Provided by [Klangoo](https://klangoosupport.zendesk.com/hc/en-us/articles/360015236872-Step-2-Registering-to-Klangoo-NLP-API)
+
 
 ## Install
 
-To use MagnetApiClient in your C# .NET project, you can either <a href="https://github.com/Klangoo/MagnetApiClient.CSharp">download the Magnet API Library directly from our Github repository</a> and reference it in your project or, if you have the Nuget package manager installed, you can download it automatically by running
+### From nuget using package manager (Recommended)
 
 ```
 PM> Install-Package Klangoo.Magnet.ApiClient
 ```
+### Manually
+To use MagnetApiClient in your C# .NET project, you can <a href="https://github.com/Klangoo/MagnetApiClient.CSharp">download the Magnet API Library directly from our Github repository</a> and reference it in your project.
 
-Once you have the Magnet API Client properly referenced in your project, you can start sending calls to the API in your code.
-For sample implementations, check the [news agency sample](https://github.com/Klangoo/MagnetApiClient.CSharp/blob/master/NewsAgencySample.cs).
 
 <a name="usage"></a>
 # Usage
 
-## Get Article
+This quick start tutorial will show you how to process a text.
 
-The following is an example for reading an article from the API:
+## Initialize the client
 
-```C#
-private static void GetArticle(string articleUID)
-{
-	MagnetAPIClient magnetAPIClient  = new MagnetAPIClient(ENDPOINT_URI, CALK, SECRET_KEY);
-			
-	Dictionary<string, string> request = new Dictionary<string, string>();
-	request.Add("articleUID", articleUID);
-	request.Add("format", "xml");
-
-	try
-	{
-		String response = magnetAPIClient.CallWebMethod("GetArticle", request, "GET");
-		XmlDocument doc = new XmlDocument();
-		doc.LoadXml(response);
-
-		if (doc.DocumentElement["status"].InnerText == "OK")
-		{
-			Console.WriteLine("GetArticle:");
-			Console.WriteLine(response);
-		}
-		else
-		{
-			// ERROR
-			HandleApiError(doc);
-		}
-	}
-	catch (Exception ex)
-	{
-		Console.WriteLine("Exception occured: " + ex.Message);
-	}
-}
-```
-
-## Add Article
-The same applies for posting or updating an article. following is an example for adding an article:
+To begin, you will need to initialize the client. In order to do this you will need your API Key **CALK** and **Secret Key**.
+You can find both on [your Klangoo account](https://connect.klangoo.com/).
 
 ```C#
-public static void AddArticle(string articleUID)
+using Klangoo.Client;
+
+
+static void ProcessDocument()
 {
-	MagnetAPIClient magnetAPIClient  = new MagnetAPIClient(ENDPOINT_URI, CALK, SECRET_KEY);
+	string ENDPOINT = "https://nlp.klangoo.com/Service.svc";
+    string CALK = "enter your calk here";
+    string SECRET_KEY = "enter your secret key here";
 
-	Dictionary<string, string> request = new Dictionary<string, string>();
-	request.Add("text", "SAMPLE ARTICLE TEXT");
-	request.Add("title", "SAMPLE ARTICLE TITLE");
-	request.Add("insertDate", "23 JAN 2017 10:12:00 +01:00"); // article date
-	request.Add("url", "http://demo.klangoo.com/article-demo/api-example");
-	request.Add("articleUID", articleUID);
-	request.Add("source", "klangoo.com");
-	request.Add("language", "en");
-	request.Add("format", "xml");
+	MagnetAPIClient client = new MagnetAPIClient(ENDPOINT, CALK, SECRET_KEY);
 
-	try
-	{
-		string response = _magnetAPIClient.CallWebMethod("AddArticle", request, "POST");
-		XmlDocument doc = new XmlDocument();
-		doc.LoadXml(response);
+	string json = client.CallWebMethod("ProcessDocument",
+		new MagnetAPIClient.Params { 
+			{ "text", "The United States of America (USA), commonly known as the United States (U.S.) or America, is a federal republic composed of 50 states, a federal district, five major self-governing territories, and various possessions." },
+			{ "lang", "en" },
+			{ "format", "json" } }, "POST");
 
-		if (doc.DocumentElement["status"].InnerText == "OK")
-		{
-			Console.WriteLine("AddArticle:");
-			Console.WriteLine(response);
-		}
-		else
-		{
-			// ERROR
-			HandleApiError(doc);
-		}
-	}
-	catch (Exception ex)
-	{
-		Console.WriteLine("Exception occured: " + ex.Message);
-	}
+	Console.WriteLine(json);
 }
 ```
-
-You can find an example implementation for all of the API calls here [here](https://github.com/Klangoo/MagnetApiClient.CSharp/blob/master/NewsAgencySample.cs).
